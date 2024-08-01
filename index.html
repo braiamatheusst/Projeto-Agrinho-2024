@@ -1,122 +1,223 @@
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meus Objetivos no ano</title>
+    <title>Agrinho 2024</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <section class="conteudo-principal">
-        <h2 class="titulo-principal">Meus objetivos do ano<span>_</span></h2>
+    <input type="checkbox" id="darkmode" class="invisib">
 
-        <div class="conteudo">
-            <div class="botoes">
-                <button class="botao ativo">Concluir o Ensino Médio</button>
-                <button class="botao">Morar Sozinho</button>
-                <button class="botao">Passar No Vestibular</button>
-                <button class="botao">Começar Uma Faculdade</button>
+    <main id="tela">
+
+        <header class="cabecalho">
+            <div class="cabecalho-div">
+                <div>
+                    <img class="logo" src="img/LogoSTEIHL.png" alt="logomarda do idealizador do site contendo uma planta e seu sobrenome envoltos em um círculo">
+                </div class="lista-div">
+                <div class="lista">
+                    <ul class="cabecalho-lista" id="menu-cabecalho">
+                        <li class="cabecalho-lista-item"><a class="link" href="#inicio">OBJETIVO</a></li>
+                        <li class="cabecalho-lista-item"><a class="link" href="#vantagens">VANTAGENS</a></li>
+                        <li class="cabecalho-lista-item"><a class="link" href="#desvantagens">DESVANTAGENS</a></li>
+                        <li class="cabecalho-lista-item"><a class="link" href="#ideia">IDEIA PRINCIPAL</a></li>
+                        <li class="cabecalho-lista-item"><a class="link" href="#conclusao">CONCLUSÃO</a></li>
+                        <li class="cabecalho-lista-item"><a class="link" href="#footer">CONTATO</a></li>
+                    </ul>
+                </div>
+                <label for="darkmode" class="darklabel">TEMA</label>
+            </div>
+        </header>
+
+        <h1 id="titulo-principal"> Inovação a Alto Custo: <br>
+            <span class="titulo-principal-linear"> O Lado Oculto da Agricultura Tecnológica
+        </h1> </span>
+
+        <section id="inicio" class="objetivo">
+
+            <div class="objetivo-div">
+                <h2 class="titulo-secundario"> Objetivo</h2>
+                <p class="texto">
+                    O objetivo central da agricultura de precisão é otimizar a gestão agrícola por meio da
+                    aplicação de tecnologias avançadas. Essa abordagem visa monitorar e responder às
+                    variabilidades dentro dos campos de cultivo de maneira detalhada e precisa. Ao utilizar
+                    dados específicos coletados para melhorias e estudos, também visando a redução de
+                    custos, desperdícios e minimização dos impactos ambientais, ao mesmo tempo em que se
+                    melhora a produtividade e a qualidade dos cultivos. <br>
+                    Assim, a agricultura de precisão não apenas busca aumentar a rentabilidade das
+                    atividades agrícolas, mas também promover práticas sustentáveis que beneficiem o mundo.
+                </p>
+            </div>
+            <div class="figure-div">
+                <figure>
+                    <img class="selecao" src="img/cifrao.png" alt="">
+                    <img src="img/dinheiro.png" alt="">
+                    <img src="img/trator.png" alt="">
+                    <img src="img/drone.png" alt="">
+                </figure>
+            </div>
+        </section>
+
+        <section id="vantagens" class="vantagens">
+            <div class="imagem-vantagens-div">
+
+                <img class="imagem-vantagens" src="img/grafico.png" alt="Imagem sobre vantagens">
             </div>
 
-            <div class="abas-textos">
-                <div class="aba-conteudo ativo">
-                    <h3 class="aba-conteudo-titulo-principal">Concluir o Ensino Médio</h3>
-                    <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
-                    <div class="contador">
-                        <div class="contador-digito">
-                            <p class="contador-digito-numero" id="dias0">7</p>
-                            <p class="contador-digito-texto">dias</p>
-                        </div>
-                        <div class="contador-digito">
-                            <p class="contador-digito-numero" id="horas0">7</p>
-                            <p class="contador-digito-texto">horas</p>
-                        </div>
-                        <div class="contador-digito">
-                            <p class="contador-digito-numero" id="min0">7</p>
-                            <p class="contador-digito-texto">minutos</p>
-                        </div>
-                        <div class="contador-digito">
-                            <p class="contador-digito-numero" id="seg0">7</p>
-                            <p class="contador-digito-texto">segundos</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="aba-conteudo">
-                    <h3 class="aba-conteudo-titulo-principal">Morar Sozinho</h3>
-                    <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
-                    <div class="contador">
-                        <div class="contador-digito">
-                            <p class="contador-digito-numero" id="dias1">7</p>
-                            <p class="contador-digito-texto">dias</p>
-                        </div>
-                        <div class="contador-digito">
-                            <p class="contador-digito-numero" id="horas1">7</p>
-                            <p class="contador-digito-texto">horas</p>
-                        </div>
-                        <div class="contador-digito">
-                            <p class="contador-digito-numero" id="min1">7</p>
-                            <p class="contador-digito-texto">minutos</p>
-                        </div>
-                        <div class="contador-digito">
-                            <p class="contador-digito-numero" id="seg1">7</p>
-                            <p class="contador-digito-texto">segundos</p>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="aba-conteudo">
-                    <h3 class="aba-conteudo-titulo-principal">Passar No Vestibular</h3>
-                    <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
-                    <div class="contador">
-                        <div class="contador-digito">
-                            <p class="contador-digito-numero" id="dias2">7</p>
-                            <p class="contador-digito-texto">dias</p>
-                        </div>
-                        <div class="contador-digito">
-                            <p class="contador-digito-numero" id="horas2">7</p>
-                            <p class="contador-digito-texto">horas</p>
-                        </div>
-                        <div class="contador-digito">
-                            <p class="contador-digito-numero" id="min2">7</p>
-                            <p class="contador-digito-texto">minutos</p>
-                        </div>
-                        <div class="contador-digito">
-                            <p class="contador-digito-numero" id="seg2">7</p>
-                            <p class="contador-digito-texto">segundos</p>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="aba-conteudo">
-                    <h3 class="aba-conteudo-titulo-principal">Começar Uma Faculdade</h3>
-                    <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
-                    <div class="contador">
-                        <div class="contador-digito">
-                            <p class="contador-digito-numero" id="dias3">7</p>
-                            <p class="contador-digito-texto">dias</p>
-                        </div>
-                        <div class="contador-digito">
-                            <p class="contador-digito-numero" id="horas3">7</p>
-                            <p class="contador-digito-texto">horas</p>
-                        </div>
-                        <div class="contador-digito">
-                            <p class="contador-digito-numero" id="min3">7</p>
-                            <p class="contador-digito-texto">minutos</p>
-                        </div>
-                        <div class="contador-digito">
-                            <p class="contador-digito-numero" id="seg3">7</p>
-                            <p class="contador-digito-texto">segundos</p>
-                        </div>
-
-                    </div>
-                </div>
+            <div class="vantagem">
+                <h2 class="titulo-secundario"> Vantagens</h2>
+                <p class="texto">
+                    Temos grandes vantagens de utilizar este novo meio de gerenciamento e operações do
+                    sistemas agrícola. Utilizando tecnologias avançadas como sensores e drones, os
+                    agricultores podem monitorar detalhadamente as condições do solo e das plantas. Isso
+                    permite uma aplicação precisa de insumos como fertilizantes e água, adaptando-se às
+                    necessidades específicas de cada área do campo.
+                    Além de aumentar a eficiência no uso de recursos, a agricultura de precisão melhora a
+                    qualidade dos cultivos e eleva a produtividade. Ao mesmo tempo, promove práticas
+                    agrícolas mais sustentáveis ao reduzir desperdícios e minimizar impactos ambientais
+                    negativos, beneficiando tanto os agricultores quanto o meio ambiente.
+                </p>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section id="desvantagens" class="desvantagens">
+            <div class="desvantagem">
+                <h2 class="titulo-secundario"> Desvantagens</h2>
+                <p class="texto">
+                    Porém, assim como temos muitas vantagens, as desvantagens são ainda maiores. Um
+                    dos principais obstáculos é o alto custo inicial associado à adoção de tecnologias
+                    avançadas, o que pode ser uma barreira para agricultores com recursos financeiros
+                    limitados.
+                    Além disso, a complexidade tecnológica requerida para operar e interpretar dados dessas
+                    ferramentas pode representar um desafio adicional, exigindo habilidades técnicas
+                    específicas e treinamento especializado, não dando espaço para pequenos agricultores
+                    sem experiência na área, isso contribui para o aumento da desigualdade de
+                    competitividade, resultando em redução de renda, disparidade social e até desemprego a
+                    estes trabalhadores.
+                </p>
+            </div>
+            <div class="imagem-desvantagem-div">
+                <img class="imagem-desvantagem" src="img/desvantagens-removebg-preview.png"
+                    alt="imagem desvantagens (creative commons)">
+            </div>
+        </section>
+
+
+        <section id="ideia" class="ideia">
+            <h2 class="titulo-secundario"> Ideia Principal</h2>
+            <p class="texto texto-ideiaPrincipal">
+                A agricultura de precisão é uma novidade grande no mercado, então seguindo a lógica,
+                como podemos implementar esta nova tecnologia a pequenos agricultores? Uma ideia
+                prática para alguém sem muitos recursos financeiros ou visibilidade, é criar uma iniciativa
+                de "agricultura de precisão comunitária". <br>
+                Esta abordagem envolve formar parcerias locais com agricultores, instituições
+                educacionais e organizações de pesquisa interessadas. Utilizando tecnologias acessíveis
+                como sensores de baixo custo e aplicativos móveis gratuitos, é possível realizar um teste
+                piloto em pequena escala. </p>
+
+            <div class="imagens-itens-ideias">
+                <img class="imagem-lampada" src="img/lampada-removebg-preview.png"
+                    alt="imagem de uma lâmpada (License Creative Commons)">
+
+                <div class="texto-item-div">
+                    <h3 class="texto titulo-itens"> <span> - </span> Como pode ser colocado em prática <span>?</span>
+                    </h3>
+                    <p class="texto-item"> 1. Formação de Parcerias Locais. </p>
+                    <p class="texto-item">2. Seleção de Tecnologias Acessíveis. </p>
+                    <p class="texto-item">3. Realização de Teste Piloto. </p>
+                    <p class="texto-item">4. Compartilhamento de Conhecimento. </p>
+                    <p class="texto-item">5. Captação de Recursos e Parcerias. </p>
+                    <p class="texto-item">6. Ênfase em Sustentabilidade. </p>
+                    <p class="texto-item">7. Monitoramento e Avaliação Contínuos. </p>
+                </div>
+
+                <img class="imagem-tecnologias" src="img/tecnologiasAcessiveis-removebg-preview.png"
+                    alt="imagem que retrata ferramentas tecnologicas acessíveis às pessoas (License Crative Commons)">
+            </div>
+
+            <p class="texto texto-ideiaPrincipal">
+                Entretanto, também precisamos de ajuda, um esforço em conjunto de vários atores,
+                empresas tecnológicas, governos, pesquisadores e até mesmo os próprios agricultores,
+                com a colaboração e ajuda dos principais órgãos da agricultura tecnológica, a desigualdade
+                e preços elevados para se manterem atualizados serão melhorados. <br>
+                A possibilidade de melhoria governamental poderia se basear principalmente em
+                investimentos de pesquisas e desenvolvimento para tecnologias mais acessíveis, além de
+                capacitação e treinamento da implementação de programas direcionados aos agricultores,
+                visando ensiná-los a integrar e utilizar eficazmente a agricultura de precisão.
+            </p>
+
+            <a href="https://www.embrapa.br/tema-automacao-e-agricultura-de-precisao/sobre-o-tema" target="_blank"><button>Para Saber Mais</button></a>
+
+        </section>
+
+        <section id="conclusao" class="conclusao">
+            <div class="imagem-conclusao-div">
+
+                <img class="imagem-conclusao" src="img/conclusão-removebg-preview.png"
+                    alt="imagem conclusão (license creative commons)">
+            </div>
+            <div class="conclusao-div-texto">
+                <h2 class="titulo-secundario">Conclusão</h2>
+                <p class="texto">
+                    Ao integrarmos todas essas ideias, não só melhoramos a qualidade de vida no campo,
+                    mas também avançamos em direção a um ambiente sustentável e de longo prazo em
+                    termos de melhorias. Este caminho não apenas promove práticas agrícolas mais eficientes
+                    e produtivas, mas também contribui para a preservação dos recursos naturais e a redução
+                    dos impactos ambientais. Ao adotarmos abordagens como a agricultura de precisão e o uso
+                    consciente de tecnologias, estamos construindo um futuro mais promissor para a
+                    agricultura, onde a sustentabilidade e a produtividade caminham lado a lado.
+                </p>
+            </div>
+        </section>
+
+
+        <footer id="footer">
+            <div>
+                <h3 class="rodape-texto">STEIHL</h3>
+            </div>
+
+            <div>
+                <h3>SEÇÕES</h3>
+                <ul>
+                    <li> <a href="#inicio">OBJETIVO</a> </li>
+                    <li> <a href="#vantagens">VANTAGEM</a> </li>
+                    <li> <a href="#desvantagens">DESVANTAGEM</a> </li>
+                    <li> <a href="#ideia">IDEIA PRINCIPAL</a> </li>
+                    <li> <a href="#conclusao">CONCLUSÃO</a> </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>DÚVIDAS</h3>
+            </div>
+
+            <div>
+                <h3>MAIS INFORMAÇÕES</h3>
+            </div>
+
+            <div>
+                <h3>CONTATO</h3>
+                <ul>
+                    <li> <img class="email-logo" src="img/gmailLogo.png" alt="logo do Gmail">
+                        <a href="mailto:bryam.steihl@escola.pr.gov.br">bryam.steihl@escola.pr.gov.br</a>
+                    </li>
+                    <li> <img class="email-logo" src="img/gmailLogo.png" alt="logo do Gmail">
+                        <a href="mailto:bryammatheusst@gmail.com">bryammatheusst@gmail.com</a>
+                    </li>
+                    <li> <img class="whatsApp-logo" src="img/WhatsApplogo1.png" alt="logo do WhatsApp">
+                        <a href="https://web.whatsapp.com/">(46)9997-4386 </a>
+                    <li> <img class="instagram-logo" src="img/instagramlogo1.png" alt="logo do Instagram">
+                        <a href="https://www.instagram.com/accounts/login/">@the.bra1nly </a>
+                </ul>
+            </div>
+
+        </footer>
+
+    </main>
     <script src="main.js"></script>
-
 </body>
 
 </html>

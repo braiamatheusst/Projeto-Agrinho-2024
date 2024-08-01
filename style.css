@@ -1,130 +1,512 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap&#39;');
-
-:root{
---cor-de-fundo: #1E1E1E;
---verde: #6FFF57;
---branco: #FFFFFF;
---botao-ativo: #8c0000;
---botao-inativo: #8b8b8b;
---texto-fundo: #565656;
---vermelho: #000000;
-}
-
-body{
-background-color: var(--cor-de-fundo);
-color: var(--branco);
-font-family: "chakra Petch", sans-serif;
-}
-
-.conteudo-principal{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 1240px;
-    width: 100%;
+* {
     margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.titulo-principal{
-    text-align: left;
-    width: 100%;
-    font-size: 32px;
+/*rolagem suave da página*/
+html{
+    scroll-behavior: smooth;
 }
 
-.titulo-principal span{
-        color: var(--botao-ativo)
+:root {
+    --cor-de-fundo: #215011;
+    --cor-de-fundo2: #467536;
+    --cor-de-fundo-tela: #e3e1de;
+    --cor-texto1: #ffffff;
+    --cor-texto2: #282828;
+    --cor-texto3: black;
+    --cor-titulo-secundario: #467536;
+    --cor-titulo-rodape:#a0e67b;
 }
 
-.botao{
-    font-family: "Chakra Petch", sans-serif;
-    background-color: var(--botao-inativo);
-    color: var(--branco);
-    display: flex;
-    justify-content: center;
-    padding: 1em;
-    font-size: 18px;
-    align-items: center;
-    width: 100%;
-    border-bottom: 4px solid var(--botao-ativo);
-    border-left: 2px solid var(--botao-ativo);
-    border-right: 2px solid var(--botao-ativo);
-    border-top: none;
+body {
+    background-color: var(--cor-de-fundo-tela);
 }
 
-.botoes{
-    display: block;
-}
+/*PARAGRAFOS ver
+p {
+    text-indent: 2em; 
+}*/
 
-.botao:first-child{
-    border-radius: 40px 40px 0 0;
-}
 
-.botao.ativo{
-    background-color: var(--botao-ativo);
-    border-bottom: 4px solid var(--botao-inativo);
-}
 
-.abas-textos{
-    background-color: var(--texto-fundo);
-    padding: 40px;
-    border-radius: 0 0 40px 40px;
-}
-.aba-conteudo.ativo{
-    display:block;
-}
 
-.aba-conteudo{
+
+
+/*ALTERAÇÃO -- TEMA CLARO E TEMA ESCURO*/
+
+.invisib {
+    /*Manter checkbox invisível*/
     display: none;
 }
 
-.aba-conteudo-titulo-principal{
-    font-size: 28px;
-    text-align: center;
-}
-.aba-conteudo-titulo-secundario{
-    text-align: center;
-    color: var(--branco);
-    text-transform: uppercase;
+#darkmode:checked+main {
+    /*Variáveis para o tema escuro - quando clicado*/ /*ALTERAR*/
+    --background-color: #111111;
+    --background-color2: #0f0f0f;
+    --cor-texto: #fff;
+    --cor-texto2: #a3a3a3;
+    background-color: var(--background-color);
+    color: var(--color-text);
 }
 
-.contador{
+.darklabel {
+    /*Criando uma label vinculada ao checkbox da troca de tema*/ /*ALTERAR*/
+    color: #111111;
+    margin-left: auto;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 17px;
+    transition: 0.2s ease-in-out;
+}
+
+.darklabel:hover {
+    /*Troca a cor da label para branco ao passar o mouse sobre ela*/ /*ALTERAR*/
+    color: #fff;
+    text-shadow: 0 0 17px #fff;
+}
+
+.darklabel::after {
+    /*Texto que ficará ao lado da label especificando a cor do tema*/
+    content: " CLARO";
+}
+
+#darkmode:checked+main .darklabel::after {
+    /*Texto que ficará ao lado da label especificando a cor do tema*/
+    content: " ESCURO";
+}
+
+
+
+/*Edição do CABECAÇALHO*/
+.cabecalho {
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-texto1);
+}
+
+.logo {
+    width: 130px;
+}
+
+.cabecalho-div {
+    display: flex;
+    padding: 10px 50px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cabecalho-lista-item {
+    display: inline-block;
+    margin: 15px;
+    font-size: 20px;
+}
+
+.link {
+    text-decoration: none;
+    color: var(--cor-texto);
+
+}
+
+/*Muda a cor quando passa o mouse sobre a palavra*/
+.link:hover {
+    color: #91e898;
+}
+
+/*Edição do Titulo principal*/
+#titulo-principal {
+    font-size: 38px;
+    padding: 24px;
+    margin: 20px;
+    line-height: 50px;
+}
+
+/*programação da coloração linear do titulo principal*/
+.titulo-principal-linear{
+    background-image: linear-gradient(to right, #426145, #0c2b02);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*Edição dos titulos secundários*/
+.titulo-secundario {
+    font-size: 36px;
+    color: var(--cor-titulo-secundario);
+    margin: 48px;
+}
+
+/*Edição dos textos*/
+.texto {
+    font-size: 20px;
+    color: var(--cor-texto2);
+    margin: 48px;
+    line-height: 30px;
+}
+
+/*Edição da Seção OBJETIVO*/
+.objetivo {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 48px 0 0;
+    text-align: justify;
 }
 
-.contador-digito{
-    padding: 0 16px;
+.imagem-agriprecisao {
+    width: 400px;
+}
+
+ /*Edição das imagens laterais*/
+figure {
+    top: 100%;
+    left: 10px;
+    z-index: -1; 
+}
+
+figure img {
+    opacity: 0;
+    max-height: 100px;
+    width: auto;
+    transition: 0.6s ease-out;
+    animation: float 3s infinite ease-in-out;
+  
+}
+
+figure .selecao {
+    opacity: 1;
+}
+
+.figure-div{
+    margin-top: 20px;
+    justify-content: center;
     text-align: center;
-    min-width: 100px;
 }
 
-.contador-digito-numero{
-    font-size: 80px;
-    margin: 0;
+
+
+/*Edição da Seção VANTAGENS*/
+.vantagens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 48px 0 0;
+    text-align: center;
 }
 
-.contador-digito-texto{
-    color: var(--botao-ativo);
+.imagem-vantagens {
+    width: 300px;
+    padding: 0 15%;
+}
+
+/*Edição da Seção DESVANTAGENS*/
+
+.desvantagens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 48px 0 0;
+    text-align: center;
+}
+
+.imagem-desvantagem-div {
+   padding: 15px 45px;
+}
+
+.imagem-desvantagem{
+    width: 300px;
+    padding: 30px 0;
+}
+
+
+
+
+/*Edição da Seção IDEIA PRINCIPAL*/
+.texto-item-div {
     font-size: 20px;
-    margin: 0;
+    color: var(--cor-texto2);
+    line-height: 35px;
+    text-align: center;
+}
+
+.titulo-itens{
+    font-size: 30px;
+    font-style: italic;
+}
+
+.titulo-itens span{
+    color: #215011;
+    font-size: 50px; 
+}
+
+.texto-ideiaPrincipal{
+    text-align: justify;
+}
+
+.imagens-itens-ideias{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.imagem-lampada{
+    width: 120px; 
+}
+
+.imagem-tecnologias{
+    width: 300px;
+}
+
+/*Edição do BOTÃO*/
+.ideia button {
+    padding: 10px 20px;
+    margin: 0 40px;
+    margin-top: 5px;
+    background-color: var(--cor-de-fundo2);
+    color: var(--cor-texto1);
+    font-size: 20px;
+    border: none;
+    border-radius: 60px;
+    box-shadow: 0 5px 0 var(--cor-de-fundo);
+    cursor: pointer;}
+
+.ideia button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 0 var(--cor-de-fundo);
+    text-shadow: 0 0 15px #fff;
+    transition: 0.3s ease-in-out;
+}
+
+.ideia button:active {
+    transform: translateY(3px);
+    box-shadow: 0 0 0 var(--cor-de-fundo);
+    transition: 0s;
+}
+
+
+
+/*Edição da Seção CONCLUSÃO*/
+
+.conclusao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 48px 0 0;
+    text-align: center;
+}
+
+.imagem-conclusao-div {
+   padding: 15px 45px;
+}
+
+.imagem-conclusao{
+    width: 350px;
+    padding: 30px 0;
 }
 
 
 
 
 
-@media screen and (min-width: 768px){
-    .botoes{
-        display: flex;
-    }
-    .botao:first-child {
-        border-radius: 40px  0 0 0;
-    }
-    .botao:last-child{
-        border-radius: 0 40px 0 0;
-    }
+
+
+
+/*rodapé*/
+footer {
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-texto);
+    text-align: center;
+    align-items: center;
+
+}
+
+.rodape-texto {
+    font-size: 42px;
+}
+
+footer {
+    left: 0;
+    width: 100%;
+    display: flex;
+    transition: 0.3s ease-in-out;
+}
+
+.whatsApp-logo, .instagram-logo, .email-logo {
+    width: 4%;
     
- }
+}
+
+
+
+ /*Divs do rodapé*/
+footer div {
+    margin: 0 auto;
+    padding: 20px 30px;
+    border-radius: 10px;
+    background-color: var(--background-color2);
+    transition: 0.3s ease-in-out;
+}
+ /*movimento sobre e desce*/
+footer div:hover {
+    transform: translateY(-15px);
+}
+
+/* tira as bolinhas dos itens*/
+footer div ul {
+    list-style: none;
+}
+
+footer div li {
+    margin-bottom: 6px;
+}
+
+/*altera cor dos titulos*/
+footer div h3 {
+    color: var(--cor-titulo-rodape);
+    margin-bottom: 10px;
+}
+
+/*muda a cor, tira sublinhado, coloca negrito*/
+footer div a {
+    position: relative;
+    text-decoration: none;
+    color: var(--cor-texto3);
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+/*coloca sombra no texto quando passa o mouse*/
+footer div a:hover {
+    color: var(--cor-texto3);
+    text-shadow: 0 0 20px #e9ed09;
+}
+
+/*conteúdo decorativo hífem antes das palavras*/
+footer div a:hover::before {
+    opacity: 1;
+    position: absolute;
+    content: "-";
+    left: -10px;
+    color: var(--cor-texto3);
+    transition: 0.3s ease-in-out;
+}
+
+
+
+/*RESPONSIVIDADE ----  ainda precisa de ajustes*/
+
+/*Ajustes 1500px*/
+
+@media screen and (min-width: 1500px) {
+    footer {
+        background-color: var(--cor-de-fundo2);
+    }
+    footer div {
+        background-color: transparent;
+    }
+    footer div:hover {
+        transform: translateY(0px);
+    }
+}
+
+/*Ajustes 1200px*/
+
+@media screen and (max-width: 1200px) {
+    footer {
+        background-color: var(--cor-de-fundo2);
+    }
+    footer div {
+        background-color: transparent;
+    }
+    footer div:hover {
+        transform: translateY(0px);
+    }
+}
+
+/*Tablet*/
+
+@media screen and (max-width: 959px) {
+    /*oculta a imagem flutuante*/
+    figure .selecao {
+        opacity: 0;
+    }
+    #button-menu {
+        display: inline;
+    }
+    #feltz {
+        margin-right: 0;
+    }
+    #feltz:hover {
+        text-shadow: 0 0 0 #fff;
+    }
+    #menu {
+        display: none;
+    }
+    #menu-mobile {
+        display: inline;
+    }
+    .darklabel {
+        font-size: 14px;
+    }
+    .darklabel:hover {
+        color: #111111;
+        text-shadow: 0 0 0 #fff;
+    }
+    .container {
+        max-width: 100%;
+    }
+    .container h2 {
+        font-size: 6vw;
+    }
+}
+
+/*Celular*/
+
+@media screen and (max-width: 767px) {
+    /*muda a posição do footer para colunas*/
+    .dtq {
+        font-size: 43px;
+    }
+    .container {
+        padding: 0 30px 200px 30px;
+    }
+    .container h2 {
+        font-size: 33px;
+    }
+    .container button {
+        padding: 6px 12px;
+        font-size: 18px;
+    }
+    footer {
+        flex-direction: column;
+        padding-top: 30px;
+    }
+    footer div {
+        width: 100%;
+    }
+}
+
+/*Ajustes 500px*/
+
+@media screen and (max-width: 500px) {
+    .darklabel::after {
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
