@@ -1,10 +1,10 @@
 # Proj-Agro-Bryam-2024
 
+# Descrição do Projeto
+Este projeto foi criado com o intuito de fornecer informações sobre a área relativamente nova na vida agrícola, visando mostrar suas vantagens e desvantagens do assunto, enfatizando melhorias para o desenvolvimento da Agricultura de Precisão. Todo o conteúdo presente neste site é original, incluindo imagens, textos e inspirações sobre o tema. 
 # Arquivo Readmi
 Site do Concurso de Programação Agrinho 2024: Agricultura de Precisão
 Bem-vindo ao repositório do site desenvolvido para o Concurso de Programação Agrinho 2024, que tem como objetivo promover a funcionalidade da Agricultura de precisão.
-# Descrição do Projeto
-Este projeto foi criado com o intuito de fornecer informações sobre a área relativamente nova na vida agrícola, visando mostrar suas vantagens e desvantagens do assunto, enfatizando melhorias para o desenvolvimento da Agricultura de Precisão. Todo o conteúdo presente neste site é original, incluindo imagens, textos e inspirações sobre o tema. 
 # Tecnologias Utilizadas
 O site foi desenvolvido utilizando as linguagens HTML, CSS e JavaScript, aproveitando os recursos dessas tecnologias para criar uma experiência diferente com navegação moderna e interativa.
 # Conteúdo do Site
