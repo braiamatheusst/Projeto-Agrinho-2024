@@ -32,7 +32,7 @@ var imgBotaoMenu = document.getElementById("imgBotaoMenu");
 
 checkMobile.addEventListener("click", function () {
     if (checkMobile.checked) {
-        imgBotaoMenu.src = "img/Menu_x.png";
+        imgBotaoMenu.src = "img/Menu_X.png";
     } else {
         imgBotaoMenu.src = "img/Menu-=.png";
     }
