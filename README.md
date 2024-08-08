@@ -18,6 +18,9 @@ Fique à vontade para explorar o código-fonte, sugerir melhorias e compartilhar
 Juntos podemos fazer a diferença para a facilitação dessa área importante no meio agrícola.
 
 # Github Pages
-….
+https://braiamatheusst.github.io/Projeto-Agrinho-2024/
+
+# Vercel Pages
+projeto-agrinho-2024-rho.vercel.app
 
 # Proj-Agro-Bryam-2024

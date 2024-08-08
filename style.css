@@ -34,7 +34,7 @@ body {
 }
 
 #darkmode:checked+main {
-    /*Variáveis para o tema escuro - quando clicado*/ /*ALTERAR*/
+    /*Variáveis para o tema escuro - quando clicado*/ 
     --background-color: #111111;
     --background-color2: #0f0f0f;
     --cor-texto: #fff;
@@ -45,7 +45,7 @@ body {
 }
 
 .darklabel {
-    /*Criando uma label vinculada ao checkbox da troca de tema*/ /*ALTERAR*/
+    /*Criando uma label vinculada ao checkbox da troca de tema*/ 
     color: #111111;
     margin-left: auto;
     cursor: pointer;
@@ -56,19 +56,19 @@ body {
 }
 
 .darklabel:hover {
-    /*Troca a cor da label para branco ao passar o mouse sobre ela*/ /*ALTERAR*/
+    /*Troca a cor da label para branco ao passar o mouse sobre ela*/
     color: #fff;
     text-shadow: 0 0 17px #fff;
 }
 
 .darklabel::after {
     /*Texto que ficará ao lado da label especificando a cor do tema*/
-    content: " CLARO";
+    content: " ESCURO";
 }
 
 #darkmode:checked+main .darklabel::after {
     /*Texto que ficará ao lado da label especificando a cor do tema*/
-    content: " ESCURO";
+    content: " CLARO";
 }
 
 /*Edição do CABECAÇALHO*/
@@ -100,11 +100,6 @@ body {
 
 }
 
-
-
-
-
-
 /* menu de navegação */
 .cabecalho-lista {
     /*lista não ordenada chamada "menu"*/
@@ -118,7 +113,6 @@ body {
     padding: 17px 0;
     white-space: nowrap;
 }
-
 
 /* botão menu mobile */
 
