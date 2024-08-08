@@ -15,19 +15,36 @@
 
         <header class="cabecalho">
             <div class="cabecalho-div">
-                <div>
-                    <img class="logo" src="img/LogoSTEIHL.png" alt="logomarda do idealizador do site contendo uma planta e seu sobrenome envoltos em um círculo">
-                </div class="lista-div">
-                <div class="lista">
-                    <ul class="cabecalho-lista" id="menu-cabecalho">
-                        <li class="cabecalho-lista-item"><a class="link" href="#inicio">OBJETIVO</a></li>
-                        <li class="cabecalho-lista-item"><a class="link" href="#vantagens">VANTAGENS</a></li>
-                        <li class="cabecalho-lista-item"><a class="link" href="#desvantagens">DESVANTAGENS</a></li>
-                        <li class="cabecalho-lista-item"><a class="link" href="#ideia">IDEIA PRINCIPAL</a></li>
-                        <li class="cabecalho-lista-item"><a class="link" href="#conclusao">CONCLUSÃO</a></li>
-                        <li class="cabecalho-lista-item"><a class="link" href="#footer">CONTATO</a></li>
-                    </ul>
-                </div>
+
+                <input type="checkbox" id="mobile" class="invisib">
+
+                <label for="mobile" id="botao-menu">
+                    <img src="img/Menu-=.png" alt="imagem que dá acesso ao menu mobile" id="imgBotaoMenu">
+                </label>
+
+                <img class="logo" src="img/LOGO_cabecalho_nova.png"
+                    alt="logomarda do idealizador do site contendo uma planta e seu sobrenome envoltos em um círculo">
+
+
+                <ul class="cabecalho-lista" id="menu-cabecalho">
+                    <li class="cabecalho-lista-item"><a class="link" href="#inicio">OBJETIVO</a></li>
+                    <li class="cabecalho-lista-item"><a class="link" href="#vantagens">VANTAGENS</a></li>
+                    <li class="cabecalho-lista-item"><a class="link" href="#desvantagens">DESVANTAGENS</a></li>
+                    <li class="cabecalho-lista-item"><a class="link" href="#ideia">IDEIA PRINCIPAL</a></li>
+                    <li class="cabecalho-lista-item"><a class="link" href="#conclusao">CONCLUSÃO</a></li>
+                    <li class="cabecalho-lista-item"><a class="link" href="#footer">CONTATO</a></li>
+                </ul>
+
+
+                <ul id="menu-mobile">
+                    <li><a href="#inicio">OBJETIVO</a></li>
+                    <li><a href="#vantagens">VANTAGENS</a></li>
+                    <li><a href="#desvantagens">DESVANTAGENS</a></li>
+                    <li><a href="#ideia">IDEIA PRINCIPAL</a></li>
+                    <li><a href="#conclusao">CONCLUSÃO</a></li>
+                    <li><a href="#footer">CONTATO</a></li>
+                </ul>
+
                 <label for="darkmode" class="darklabel">TEMA</label>
             </div>
         </header>
@@ -36,12 +53,12 @@
             <span class="titulo-principal-linear"> O Lado Oculto da Agricultura Tecnológica
         </h1> </span>
 
-        <section id="inicio" class="objetivo">
+        <section id="inicio" class="objetivo container">
 
             <div class="objetivo-div">
                 <h2 class="titulo-secundario"> Objetivo</h2>
                 <p class="texto">
-                    O objetivo central da agricultura de precisão é otimizar a gestão agrícola por meio da
+                    O objetivo central da agricultura de precisão é <span class="destaque">otimizar a gestão agrícola</span>  por meio da
                     aplicação de tecnologias avançadas. Essa abordagem visa monitorar e responder às
                     variabilidades dentro dos campos de cultivo de maneira detalhada e precisa. Ao utilizar
                     dados específicos coletados para melhorias e estudos, também visando a redução de
@@ -53,18 +70,18 @@
             </div>
             <div class="figure-div">
                 <figure>
-                    <img class="selecao" src="img/cifrao.png" alt="">
-                    <img src="img/dinheiro.png" alt="">
-                    <img src="img/trator.png" alt="">
-                    <img src="img/drone.png" alt="">
+                    <img class="selecao planta-imagem" src="img/planta_verde.png" alt="">
+                    <img class="dinheiro-imagem" src="img/dinheiro_verde.png" alt="">
+                    <img class="trator-imagem" src="img/Trator_verde.png" alt="">
+                    <img class="drone-imagem" src="img/Drone_verde.png" alt="">
                 </figure>
             </div>
         </section>
 
-        <section id="vantagens" class="vantagens">
+        <section id="vantagens" class="vantagens container">
             <div class="imagem-vantagens-div">
 
-                <img class="imagem-vantagens" src="img/grafico.png" alt="Imagem sobre vantagens">
+                <img class="imagem-vantagens" src="img/grafico.png" alt="Imagem de um gráfico com resultados positivos indicando vantagens">
             </div>
 
             <div class="vantagem">
@@ -83,7 +100,7 @@
             </div>
         </section>
 
-        <section id="desvantagens" class="desvantagens">
+        <section id="desvantagens" class="desvantagens container">
             <div class="desvantagem">
                 <h2 class="titulo-secundario"> Desvantagens</h2>
                 <p class="texto">
@@ -101,12 +118,12 @@
             </div>
             <div class="imagem-desvantagem-div">
                 <img class="imagem-desvantagem" src="img/desvantagens-removebg-preview.png"
-                    alt="imagem desvantagens (creative commons)">
+                    alt="imagem de folhas, dinheiro e uma calculadora, indicando uma pessoa fazendo calculos">
             </div>
         </section>
 
 
-        <section id="ideia" class="ideia">
+        <section id="ideia" class="ideia container">
             <h2 class="titulo-secundario"> Ideia Principal</h2>
             <p class="texto texto-ideiaPrincipal">
                 A agricultura de precisão é uma novidade grande no mercado, então seguindo a lógica,
@@ -119,8 +136,8 @@
                 piloto em pequena escala. </p>
 
             <div class="imagens-itens-ideias">
-                <img class="imagem-lampada" src="img/lampada-removebg-preview.png"
-                    alt="imagem de uma lâmpada (License Creative Commons)">
+                <img class="imagem-lampada" src="img/lampada_verde.png"
+                    alt="imagem de uma lâmpada representando novas ideias">
 
                 <div class="texto-item-div">
                     <h3 class="texto titulo-itens"> <span> - </span> Como pode ser colocado em prática <span>?</span>
@@ -134,8 +151,9 @@
                     <p class="texto-item">7. Monitoramento e Avaliação Contínuos. </p>
                 </div>
 
-                <img class="imagem-tecnologias" src="img/tecnologiasAcessiveis-removebg-preview.png"
-                    alt="imagem que retrata ferramentas tecnologicas acessíveis às pessoas (License Crative Commons)">
+                <img class="imagem-tecnologias" src="img/imagem-circulos (2).png"
+                    alt="imagem que retrata ferramentas tecnologicas acessíveis às pessoas tais como acesso a internet e inovação de produtos.">
+
             </div>
 
             <p class="texto texto-ideiaPrincipal">
@@ -149,15 +167,16 @@
                 visando ensiná-los a integrar e utilizar eficazmente a agricultura de precisão.
             </p>
 
-            <a href="https://www.embrapa.br/tema-automacao-e-agricultura-de-precisao/sobre-o-tema" target="_blank"><button>Para Saber Mais</button></a>
+            <a href="https://www.embrapa.br/tema-automacao-e-agricultura-de-precisao/sobre-o-tema"
+                target="_blank"><button>Para Saber Mais</button></a>
 
         </section>
 
-        <section id="conclusao" class="conclusao">
+        <section id="conclusao" class="conclusao container">
             <div class="imagem-conclusao-div">
 
-                <img class="imagem-conclusao" src="img/conclusão-removebg-preview.png"
-                    alt="imagem conclusão (license creative commons)">
+                <img class="imagem-conclusao" src="img/soja.jpeg"
+                    alt="imagem de uma lavoura de soja">
             </div>
             <div class="conclusao-div-texto">
                 <h2 class="titulo-secundario">Conclusão</h2>
@@ -168,7 +187,7 @@
                     e produtivas, mas também contribui para a preservação dos recursos naturais e a redução
                     dos impactos ambientais. Ao adotarmos abordagens como a agricultura de precisão e o uso
                     consciente de tecnologias, estamos construindo um futuro mais promissor para a
-                    agricultura, onde a sustentabilidade e a produtividade caminham lado a lado.
+                    agricultura, onde a <span class="destaque">sustentabilidade</span> e a <span class="destaque">produtividade</span> caminham lado a lado.
                 </p>
             </div>
         </section>
@@ -176,7 +195,8 @@
 
         <footer id="footer">
             <div>
-                <h3 class="rodape-texto">STEIHL</h3>
+                <img class="logo-rodape" src="img/Logo_rodape_novo.png"
+                    alt="logo com o sobrenome do progamador desta página 'STEIHL'">
             </div>
 
             <div>
@@ -191,11 +211,12 @@
             </div>
 
             <div>
-                <h3>DÚVIDAS</h3>
-            </div>
-
-            <div>
                 <h3>MAIS INFORMAÇÕES</h3>
+                <a href="https://www.embrapa.br/">Empresa Brasileira de Pesquisa Agropecuária (Embrapa)</a>
+                <br> <br>
+                <a href="https://www.embrapa.br/laboratorio-de-referencia-nacional-em-agricultura-de-precisao-lanapre">Laboratório
+                    de Referência Nacional em Agricultura de Precisão (Lanapre)</a>
+
             </div>
 
             <div>

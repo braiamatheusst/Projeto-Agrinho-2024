@@ -1,4 +1,5 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -16,22 +17,13 @@ html{
     --cor-texto1: #ffffff;
     --cor-texto2: #282828;
     --cor-texto3: black;
-    --cor-titulo-secundario: #467536;
+    --cor-titulo-secundario: #6f4405;
     --cor-titulo-rodape:#a0e67b;
 }
 
 body {
     background-color: var(--cor-de-fundo-tela);
 }
-
-/*PARAGRAFOS ver
-p {
-    text-indent: 2em; 
-}*/
-
-
-
-
 
 
 /*ALTERAÇÃO -- TEMA CLARO E TEMA ESCURO*/
@@ -46,9 +38,10 @@ p {
     --background-color: #111111;
     --background-color2: #0f0f0f;
     --cor-texto: #fff;
-    --cor-texto2: #a3a3a3;
+    --cor-texto2: #666666;
     background-color: var(--background-color);
-    color: var(--color-text);
+    color: #215011;
+    --cor-titulo-secundario: #215011;
 }
 
 .darklabel {
@@ -59,6 +52,7 @@ p {
     font-weight: bold;
     font-size: 17px;
     transition: 0.2s ease-in-out;
+
 }
 
 .darklabel:hover {
@@ -77,8 +71,6 @@ p {
     content: " ESCURO";
 }
 
-
-
 /*Edição do CABECAÇALHO*/
 .cabecalho {
     background-color: var(--cor-de-fundo);
@@ -86,7 +78,7 @@ p {
 }
 
 .logo {
-    width: 130px;
+    width: 100px;
 }
 
 .cabecalho-div {
@@ -108,9 +100,112 @@ p {
 
 }
 
+
+
+
+
+
+/* menu de navegação */
+.cabecalho-lista {
+    /*lista não ordenada chamada "menu"*/
+    display: flex;
+}
+
+.cabecalho-lista, .cabecalho-lista-item {
+    /*Colocando espaçamento nos elementos do menu superior*/
+    list-style: none;
+    margin: 0 20px;
+    padding: 17px 0;
+    white-space: nowrap;
+}
+
+
+/* botão menu mobile */
+
+#botao-menu {
+    display: none;
+    position: relative;
+    max-width: 30px;
+    max-height: 30px;
+    cursor: pointer;
+    margin-right: auto;
+    background-color: transparent;
+    border: none;
+}
+
+#botao-menu img {
+    position: relative;
+    width: 200%;
+    height: 200%;
+}
+
+#mobile:checked ~ #menu-mobile {
+    left: 0;
+}
+
+/* menu mobile */
+
+#menu-mobile {
+    list-style: none;
+    display: none;
+    position: absolute;
+    top: 115px;
+    left: -80%;
+    width: 50%;
+    padding: 12px 18px;
+    background-color: var(--cor-de-fundo);
+    backdrop-filter: blur(6px);
+    border-end-end-radius: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+#menu-mobile li {
+    display: block;
+    white-space: nowrap;
+    padding: 6px 0;
+    transition: 0.3s ease-in-out;
+}
+
+#menu-mobile li:hover {
+    transform: translateX(6px);
+}
+
+#menu-mobile a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    transition: 0.1s ease-in-out;
+}
+
+#menu-mobile li a:hover {
+    color: #111111;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*Muda a cor quando passa o mouse sobre a palavra*/
 .link:hover {
-    color: #91e898;
+    color: #1dfa2f;
 }
 
 /*Edição do Titulo principal*/
@@ -144,6 +239,12 @@ p {
     line-height: 30px;
 }
 
+/*Edição de palavras DESTACADAS no meio do texto*/
+.destaque{
+    color: var(--cor-de-fundo);
+    font-weight: 700;
+}
+
 /*Edição da Seção OBJETIVO*/
 .objetivo {
     display: flex;
@@ -166,8 +267,8 @@ figure {
 
 figure img {
     opacity: 0;
-    max-height: 100px;
-    width: auto;
+    max-height: 150px;
+   
     transition: 0.6s ease-out;
     animation: float 3s infinite ease-in-out;
   
@@ -182,6 +283,21 @@ figure .selecao {
     justify-content: center;
     text-align: center;
 }
+
+.planta-imagem{
+    width: 160px;
+}
+.dinheiro-imagem{
+    width: 120px;    
+}
+.trator-imagem{
+    width: 180px;    
+}
+.drone-imagem{
+    width: 250px;    
+}
+
+
 
 
 
@@ -318,23 +434,22 @@ footer {
     color: var(--cor-texto);
     text-align: center;
     align-items: center;
-
-}
-
-.rodape-texto {
-    font-size: 42px;
-}
-
-footer {
     left: 0;
     width: 100%;
     display: flex;
     transition: 0.3s ease-in-out;
 }
 
+.rodape-texto {
+    font-size: 42px;
+}
+
+.logo-rodape{
+    width: 200px;
+}
+
 .whatsApp-logo, .instagram-logo, .email-logo {
-    width: 4%;
-    
+    width: 4%; 
 }
 
 
@@ -344,7 +459,6 @@ footer div {
     margin: 0 auto;
     padding: 20px 30px;
     border-radius: 10px;
-    background-color: var(--background-color2);
     transition: 0.3s ease-in-out;
 }
  /*movimento sobre e desce*/
@@ -386,7 +500,6 @@ footer div a:hover {
 footer div a:hover::before {
     opacity: 1;
     position: absolute;
-    content: "-";
     left: -10px;
     color: var(--cor-texto3);
     transition: 0.3s ease-in-out;
@@ -396,31 +509,37 @@ footer div a:hover::before {
 
 /*RESPONSIVIDADE ----  ainda precisa de ajustes*/
 
-/*Ajustes 1500px*/
+/*Ajustes para quando passa de 1500px*/
 
 @media screen and (min-width: 1500px) {
-    footer {
-        background-color: var(--cor-de-fundo2);
-    }
+   
     footer div {
         background-color: transparent;
     }
     footer div:hover {
         transform: translateY(0px);
     }
+ 
 }
 
 /*Ajustes 1200px*/
 
 @media screen and (max-width: 1200px) {
-    footer {
-        background-color: var(--cor-de-fundo2);
-    }
+   
     footer div {
         background-color: transparent;
     }
     footer div:hover {
         transform: translateY(0px);
+    }
+    .cabecalho-lista-item {
+        display: inline-block;
+        margin: 15px;
+        font-size: 16px;
+    }
+
+    .darklabel {
+        font-size: 16px;
     }
 }
 
@@ -428,64 +547,113 @@ footer div a:hover::before {
 
 @media screen and (max-width: 959px) {
     /*oculta a imagem flutuante*/
-    figure .selecao {
-        opacity: 0;
-    }
-    #button-menu {
-        display: inline;
-    }
-    #feltz {
-        margin-right: 0;
-    }
-    #feltz:hover {
-        text-shadow: 0 0 0 #fff;
-    }
-    #menu {
+  
+    .planta-imagem, 
+    .dinheiro-imagem, 
+    .trator-imagem, 
+    .drone-imagem{
         display: none;
     }
+
+    .imagem-conclusao, 
+    .imagem-tecnologias, 
+    .imagem-lampada, 
+    .imagem-desvantagem, 
+    .imagem-vantagens, 
+    .figure-div {
+        display: none;
+    }
+
+    footer div {
+        width: 90%;
+    }
+
+    #botao-menu {
+        display: inline;
+      
+    }
+    .logo {
+        margin-right: 0;
+    }
+   
+    #menu-cabecalho {
+        display: none;
+    }
+
     #menu-mobile {
         display: inline;
     }
+
     .darklabel {
-        font-size: 14px;
+        font-size: 16px;
     }
-    .darklabel:hover {
-        color: #111111;
-        text-shadow: 0 0 0 #fff;
-    }
+    
     .container {
         max-width: 100%;
+        font-size: 24px;
+        padding: 0;
+        margin: 0;
     }
+
     .container h2 {
-        font-size: 6vw;
+        font-size: 32px;
     }
+    
+
+  
 }
 
 /*Celular*/
 
 @media screen and (max-width: 767px) {
     /*muda a posição do footer para colunas*/
-    .dtq {
-        font-size: 43px;
+  
+    .cabecalho{
+        padding: 0;
+        margin: 0;
     }
-    .container {
-        padding: 0 30px 200px 30px;
+
+    #titulo-principal{
+        font-size: 24px;
     }
-    .container h2 {
-        font-size: 33px;
-    }
-    .container button {
+    
+    .button {
         padding: 6px 12px;
-        font-size: 18px;
+        font-size: 18px;   
     }
+
     footer {
         flex-direction: column;
         padding-top: 30px;
-    }
+        }
+
     footer div {
-        width: 100%;
+        width: 80%;
     }
+
+    .imagem-conclusao, 
+    .imagem-tecnologias, 
+    .imagem-lampada, 
+    .imagem-desvantagem, 
+    .imagem-vantagens, 
+    .figure-div {
+      display: none;
+    }
+
+    .container{
+        width: 80%;
+        font-size: 18px;
+        padding: 0;
+        margin: 0;
+        padding-right: 0;
+        margin-right: 0;
+    }
+
+    
 }
+
+
+
 
 /*Ajustes 500px*/
 

@@ -1,61 +1,46 @@
-const botoes = document.querySelectorAll(".botao");
-const textos = document.querySelectorAll(".aba-conteudo");
+//transição de imagens laterais
 
-for (let i = 0; i < botoes.length; i++) {
-    botoes[i].onclick = function () {
+const images = document.querySelectorAll("figure img");
 
-        for (let j = 0; j < botoes.length; j++) {
-            botoes[j].classList.remove("ativo");
-            textos[j].classList.remove("ativo");
-        }
+let tempo = 1666;
+let imagemAtual = 0;
+ultimaImagem = images.length;
 
-        botoes[i].classList.add("ativo");
-        textos[i].classList.add("ativo");
-    }
+function proximaImagem() {
+    images[imagemAtual].classList.remove("selecao");
+    imagemAtual++;
+
+    if (imagemAtual >= ultimaImagem)
+        imagemAtual = 0
+
+    images[imagemAtual].classList.add("selecao");
 }
 
-const contadores = document.querySelectorAll(".contador");
-const tempoObjetivo1 = new Date("2024-12-13T00:00:00");
-const tempoObjetivo2 = new Date("2023-01-13T00:00:00");
-const tempoObjetivo3 = new Date("2025-03-13T00:00:00");
-const tempoObjetivo4 = new Date("2025-06-13T00:00:00");
+function mudaImagem() {
+    setInterval(() => {
+        proximaImagem()
+    }, tempo)
+}
 
-const tempos = [tempoObjetivo1, tempoObjetivo2, tempoObjetivo3, tempoObjetivo4]
-
-function calculaTempo(tempoObjetivo) {
-    let tempoAtual = new Date();
-    let tempoFinal = tempoObjetivo - tempoAtual
-    let segundos = Math.floor(tempoFinal / 1000);
-    let minutos = Math.floor(segundos / 60);
-    let horas = Math.floor(minutos / 60);
-    let dias = Math.floor(horas / 24);
+window.addEventListener("load", mudaImagem)
 
 
-    segundos %= 60;
-    minutos %= 60;
-    horas %= 24;
 
-    if (tempoFinal > 0) {
-        return [dias, horas, minutos, segundos];
+// troca de imagem no menu mobile no cabeçalho
+var checkMobile = document.getElementById("mobile");
+var imgBotaoMenu = document.getElementById("imgBotaoMenu");
+
+checkMobile.addEventListener("click", function () {
+    if (checkMobile.checked) {
+        imgBotaoMenu.src = "img/Menu_x.png";
     } else {
-        return [0, 0, 0, 0];
+        imgBotaoMenu.src = "img/Menu-=.png";
     }
+});
 
-}
 
-function atualizaCronometro() {
 
-    for (let i = 0; i < contadores.length; i++) {
-        document.getElementById("dias" + i).textContent = calculaTempo(tempos[i])[0];
-        document.getElementById("horas" + i).textContent = calculaTempo(tempos[i])[1];
-        document.getElementById("min" + i).textContent = calculaTempo(tempos[i])[2];
-        document.getElementById("seg" + i).textContent = calculaTempo(tempos[i])[3];
-    }
-}
 
-function comecaCronometro() {
-    atualizaCronometro();
-    seltInterval(atualizaCronometro, 1000);
-}
 
-comecaCronometro();
+
+
